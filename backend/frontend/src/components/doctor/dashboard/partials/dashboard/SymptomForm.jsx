@@ -21,7 +21,7 @@ const SymptomForm = ({setShowPatientAnalysis,setShowDiseasePrediction}) => {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/predict_symptoms', { symptoms });
+      const response = await axios.post('https://flask-api-rw0z.onrender.com/predict_symptoms', { symptoms });
       setPrediction(response.data.predicted_label);
       setError(null);
     } catch (err) {

@@ -33,7 +33,7 @@ const MedicalDataForm = () => {
     setError(null);
 
     try {
-      const response = await axios.post('http://localhost:5000/predict_blood', {
+      const response = await axios.post('https://flask-api-rw0z.onrender.com/predict_blood', {
         RBC: formData.rbc,
         PCV: formData.pcv,
         MCV: formData.mcv,

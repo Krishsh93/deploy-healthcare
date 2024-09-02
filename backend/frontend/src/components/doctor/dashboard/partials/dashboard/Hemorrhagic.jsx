@@ -39,7 +39,7 @@ const ImageUpload = ({setShowPatientAnalysis,showPatientAnalysis,showHemorrhagic
 
 
     try {
-      const response = await axios.post(`http://localhost:5000/predict_hemorrhage`, formData, {
+      const response = await axios.post(`https://flask-api-rw0z.onrender.com/predict_hemorrhage`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
